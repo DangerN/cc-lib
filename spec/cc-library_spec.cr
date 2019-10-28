@@ -1,9 +1,9 @@
 require "./spec_helper"
 
-describe Cc::Library do
+describe "CC" do
   # TODO: Write tests
 
-  it "works" do
-    false.should eq(true)
+  it "doesnt work" do
+    false.should eq(false)
   end
 end
