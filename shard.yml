@@ -2,8 +2,12 @@ name: cc-library
 version: 0.1.0
 
 authors:
-  - your-name-here <cdneal091@gmail.com>
+  - crystal-neal <cdneal091@gmail.com>
 
+dependencies:
+  object-send:
+    github: j8r/crystal-object-send
+    
 crystal: 0.31.1
 
 license: MIT

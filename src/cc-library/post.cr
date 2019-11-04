@@ -1,16 +1,18 @@
+require "./base.cr"
+
 module CC
   # Belongs to a single `Thread` and `Board`.
-  class Post
-    getter id : Int64, thread_id : Int32
+  # :nodoc: # TODO: handle options with a macro.
+  class Post < Base
+
+    # TODO: Convert all implementations to use Symbols for flags and badges
     property badges = [] of String, text = String, media_link = String
+    ALLOWED_OPTIONS = {badges: [] of String, text: String, media_link: String}
 
-    # A post requires an id and a thread_id
-    def initialize(thread_id, id)
-      @id, @thread_id = id, thread_id
-    end
-
-    def initialize(thread_id, id, **options)
-      @id, @thread_id = id, thread_id
+    def handle_options(options)
+      {% for option, option_type in ALLOWED_OPTIONS %}
+        @{{option.id}} = {{option_type}}
+      {% end %}
     end
   end
 end
