@@ -1,4 +1,5 @@
 require "./cc-library/*"
+require "json"
 
 # TODO: Write documentation for `CC::Library`
 module CC
@@ -9,14 +10,8 @@ module CC
 
 end
 
-post = CC::Post.new(id: 12312312414)
-post2 = CC::Post.new(id: 12312323414, options: {badges: ["fuck","butts"], ham: "boning", yeet: "benis"})
+fit = CC::Board.new(id: :fit, flags: [:potato], thread_limit: 30.to_u8)
+pol = CC::Board.new(id: :pol)
 
-board = CC::Board.new(id: :fit, options: {thread_limit: 20})
-board2 = CC::Board.new(id: :pol, options: {thread_limit: 20})
-
-board.add_thread(thread_id: 15, options: {badges: ["wut"]})
-
-25.times do |i|
-  board.add_thread(thread_id: i, options: {badges: ["wut"]})
-end
+fit.new_thread(id: 427854435)
+puts fit.threads

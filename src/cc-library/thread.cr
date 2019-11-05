@@ -1,16 +1,16 @@
 module CC
   # Belongs to a single `Board` and contains many `Post`s.
-  class Thread < Base
-    property flags = [] of Symbol, limit : Int16 = 350, posts = [] of Post
-    ALLOWED_OPTIONS = [:badges, :text, :media_link]
+  class Thread
+    property flags, post_limit, posts
+    getter id
+    @@all = [] of self
 
-    def handle_options(options)
-      return unless options.size > 0
+    def initialize(@id : UInt32, @flags = [] of Symbol, @post_limit = UInt16.new(350), @posts = [] of Post)
+      @@all << self
     end
 
-    # TODO: add functionality
-    def add_post(post_hash)
-
+    def self.all
+      @@all
     end
   end
 end
