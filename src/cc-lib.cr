@@ -3,7 +3,7 @@ require "json"
 
 # TODO: Write documentation for `CC::Library`
 module CC
-  VERSION = "0.1.0"
+  VERSION = "0.1.1"
 
   def add_post_to_thread(args_name)
 
