@@ -5,13 +5,16 @@ require "json"
 module CC
   VERSION = "0.1.0"
 
-  # TODO: define method to add a post that takes at least the argument of a board
+  def add_post_to_thread(args_name)
 
+  end
+
+  def add_thread_to_board(args_name)
+
+  end
+
+  def create_new_thread(args_name)
+
+  end
 
 end
-
-fit = CC::Board.new(id: :fit, flags: [:potato], thread_limit: 30.to_u8)
-pol = CC::Board.new(id: :pol)
-
-fit.new_thread(id: 427854435)
-puts fit.threads

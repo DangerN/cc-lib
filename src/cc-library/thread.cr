@@ -12,5 +12,9 @@ module CC
     def self.all
       @@all
     end
+
+    def new_post(args_name)
+
+    end
   end
 end

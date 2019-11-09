@@ -10,11 +10,16 @@ module CC
     end
 
     def new_thread(id, post)
-      @threads << Thread.new(id: id.to_u32, posts[post])
+      self.archive_last_thread unless @threads.size < @thread_limit
+      @threads << Thread.new(id: id.to_u32, posts: [post])
     end
 
     def self.all
       @@all
+    end
+
+    def archive_last_thread
+      puts "archivings #{@threads.last}"
     end
   end
 end
