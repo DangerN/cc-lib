@@ -1,4 +1,4 @@
-require "./cc-library/*"
+require "./cc-lib/*"
 require "json"
 
 # TODO: Write documentation for `CC::Library`
