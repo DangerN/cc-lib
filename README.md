@@ -8,8 +8,8 @@ TODO: Write a description here
 
    ```yaml
    dependencies:
-     cc-library:
-       github: your-github-user/cc-library
+     cc-lib:
+       github: DangerN/cc-lib
    ```
 
 2. Run `shards install`
