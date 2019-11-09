@@ -17,7 +17,7 @@ TODO: Write a description here
 ## Usage
 
 ```crystal
-require "cc-library"
+require "cc-lib"
 ```
 
 TODO: Write usage instructions here
