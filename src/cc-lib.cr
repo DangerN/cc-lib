@@ -8,6 +8,14 @@ module CC
   @@subscriptions = {} of String => Array(HTTP::WebSocket)
   @@sockets = [] of HTTP::WebSocket
 
+  def self.subscriptions
+    @@subscriptions
+  end
+
+  def self.sockets
+    @@sockets
+  end
+
   def self.boards
       @@boards
   end
