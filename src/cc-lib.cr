@@ -3,25 +3,35 @@ require "json"
 
 # TODO: Write documentation for `CC::Library`
 module CC
-  VERSION = "0.1.1"
+  VERSION = "0.2.0"
+  @@boards = [] of Board
 
-  def self.initialize_boards
-    BOARD_LIST.each do |board, options|
-      puts options
-      Board.new(id: board)
-    end
+  def self.boards
+      @@boards
   end
 
-  def self.get_board(board_id)
-    Board.get_by_id(board_id)
+  # Takes a JSON object representing a `Board`
+  def self.initialize_board_from_json(board)
+    @@boards << Board.from_json(board)
   end
+
+  def self.initialize_dummy_boards
+    initialize_board_from_json(%({"id":"fit", "name":"Fitness", "threads":[{"id":34003}]}))
+    initialize_board_from_json(%({
+      "id":"ck",
+      "name":"Cooking",
+      "flags": ["sfw"],
+      "threads":[{
+        "id":43003,
+        "posts":[{
+          "id":892345720934,
+          "text":"sux butts"
+          },{
+            "id":892345720937,
+            "text":"no u"
+            }]
+            }]
+            }))
+  end
+
 end
-
-CC.initialize_boards
-
-ck = CC.get_board(:ck)
-fit = CC.get_board(:fit)
-
-th = fit.create_thread(id: 2534982)
-
-puts th.posts
