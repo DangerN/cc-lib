@@ -17,10 +17,9 @@ module CC
 
     def create_thread(**thread_options)
       puts thread_options
-    end
-
-    def wat
-      puts "wat"
+      Thread.new(id: thread_options[:id].to_u32, posts: [
+        Post.new(id: 9207834522345)
+        ])
     end
 
     def archive_last_thread
@@ -28,18 +27,15 @@ module CC
     end
 
     def self.get_by_id(id)
-      puts "im tring to find a board"
-      thing = @@all.find do |board|
-        puts typeof(board)
+      board = @@all.find do |board|
         board.id == id
       end
-      raise "invalid board id" unless !thing.nil?
-      thing
+      raise "invalid board id" unless !board.nil?
+      board
     end
 
     def self.all
       @@all
     end
-
   end
 end

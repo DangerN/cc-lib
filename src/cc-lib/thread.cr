@@ -6,6 +6,7 @@ module CC
     @@all = [] of self
 
     def initialize(@id : UInt32, @flags = [] of Symbol, @post_limit = UInt16.new(350), @posts = [] of Post)
+      raise "threads must start with a post" unless @posts.size > 0
       @@all << self
     end
 

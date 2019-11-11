@@ -1,9 +1,15 @@
-# BOARD_LIST = [:fit, :ck, :gif, :wsg]
-BOARD_LIST = {
-  fit: {
-    name: "Fitness",
-    flags: [:sfw],
-    threads: [] of Thread
+
+{
+  "fit": {
+    "name": "Fitness",
+    "flags": ["sfw"],
+    "threads": [
+      "id": "2534982",
+      "posts": [
+        "id": "10893487110",
+        "text": "bepis"
+      ],
+    ]
   },
   ck: {
     name: "Cooking",

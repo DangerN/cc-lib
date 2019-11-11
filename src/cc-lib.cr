@@ -15,20 +15,13 @@ module CC
   def self.get_board(board_id)
     Board.get_by_id(board_id)
   end
-
-  def add_post_to_thread(args_name)
-
-  end
-
-  def add_thread_to_board(args_name)
-
-  end
 end
 
 CC.initialize_boards
 
 ck = CC.get_board(:ck)
 fit = CC.get_board(:fit)
-puts typeof(fit)
 
-fit.wat
+th = fit.create_thread(id: 2534982)
+
+puts th.posts
