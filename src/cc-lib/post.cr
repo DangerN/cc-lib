@@ -8,5 +8,9 @@ module CC
     property text : String = ""
     property media_link : String = ""
 
+    def initialize(@id : UInt64, @badges = [] of String, @flags = [] of String, @text = "", @media_link = "")
+
+    end
+
   end
 end

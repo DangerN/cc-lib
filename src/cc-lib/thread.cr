@@ -8,6 +8,13 @@ module CC
     property flags = [] of String
     property post_limit : UInt16 = 350
     property posts = [] of CC::Post
-    
+
+    def initialize(@id : UInt32, @flags = [] of String, @post_limit : UInt16 = 350, @posts = [] of CC::Post)
+
+    end
+
+    def add_post(post_options)
+      @posts << CC::Post.new **post_options
+    end
   end
 end

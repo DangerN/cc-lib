@@ -3,7 +3,7 @@ require "json"
 
 # TODO: Write documentation for `CC::Library`
 module CC
-  VERSION = "0.2.0"
+  VERSION = "0.2.1"
   @@boards = [] of Board
 
   def self.boards
@@ -34,4 +34,17 @@ module CC
             }))
   end
 
+  def self.board_by_id(board_id)
+    board = @@boards.find { |board| board.id == board_id }
+    board.not_nil!
+  end
+
+
 end
+
+
+# CC.initialize_dummy_boards
+# fit = CC.board_by_id "fit"
+# puts fit.id
+#
+# fit.add_thread({id: 20789.to_u32}, {id: 82709208954.to_u64, text: "yeet"})
