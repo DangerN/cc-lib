@@ -5,6 +5,8 @@ require "json"
 module CC
   VERSION = "0.2.1"
   @@boards = [] of Board
+  @@subscriptions = {} of String => Array(HTTP::WebSocket)
+  @@sockets = [] of HTTP::WebSocket
 
   def self.boards
       @@boards
