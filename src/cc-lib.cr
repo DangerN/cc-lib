@@ -17,7 +17,7 @@ module CC
   end
 
   def self.boards
-      @@boards
+    @@boards
   end
 
   # Takes a JSON object representing a `Board`
