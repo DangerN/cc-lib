@@ -14,7 +14,8 @@ module CC
     		"posts": [{
     				"id": 892355720934,
     				"text": "sux fit butts",
-            "media_link": "yeet yuh meat"
+            "media_link": "yeet yuh meat",
+            "flags": ["img"]
     			},
     			{
     				"id": 892345726937,
@@ -26,7 +27,8 @@ module CC
     		"posts": [{
     				"id": 892345735934,
     				"text": "fit butts",
-            "media_link": "yeet yuh meat"
+            "media_link": "yeet yuh meat",
+            "flags": ["img"]
     			},
     			{
     				"id": 892245720937,
@@ -48,7 +50,8 @@ module CC
     		"posts": [{
     				"id": 892345720934,
     				"text": "sux butts",
-            "media_link": "yeet yuh meat"
+            "media_link": "yeet yuh meat",
+            "flags": ["img"]
     			},
     			{
     				"id": 892345620937,
@@ -69,7 +72,8 @@ module CC
     		"posts": [{
     				"id": 892325720934,
     				"text": "sux vidya butts",
-            "media_link": "yeet yuh meat"
+            "media_link": "yeet yuh meat",
+            "flags": ["img"]
     			},
     			{
     				"id": 892345720937,
@@ -81,7 +85,8 @@ module CC
     		"posts": [{
     				"id": 892345735934,
     				"text": "vidya butts",
-            "media_link": "yeet yuh meat"
+            "media_link": "yeet yuh meat",
+            "flags": ["img"]
     			},
     			{
     				"id": 892245720937,
@@ -103,7 +108,8 @@ module CC
     		"posts": [{
     				"id": 892345720934,
     				"text": "sux origami butts",
-            "media_link": "yeet yuh meat"
+            "media_link": "yeet yuh meat",
+            "flags": ["img"]
     			},
     			{
     				"id": 892345720937,
@@ -115,12 +121,14 @@ module CC
     		"posts": [{
     				"id": 892345735934,
     				"text": "origami butts",
-            "media_link": "yeet yuh meat"
+            "media_link": "yeet yuh meat",
+            "flags": ["img"]
     			},
     			{
     				"id": 892245720937,
     				"text": "origami is the best",
-            "media_link": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-hIEpj7OwhAg%2FWGDZWujlVFI%2FAAAAAAAAvmo%2FmTWHNOYViuwcTJSrEMCW5Uw6EhgZyab0gCLcB%2Fs1600%2FPlastic%252BSpoon%252BNew%252BYears%252BCrown-11.jpg&f=1&nofb=1"
+            "media_link": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F1.bp.blogspot.com%2F-hIEpj7OwhAg%2FWGDZWujlVFI%2FAAAAAAAAvmo%2FmTWHNOYViuwcTJSrEMCW5Uw6EhgZyab0gCLcB%2Fs1600%2FPlastic%252BSpoon%252BNew%252BYears%252BCrown-11.jpg&f=1&nofb=1",
+            "flags": ["img"]
     			}
     		]
     	}]
