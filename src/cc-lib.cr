@@ -31,8 +31,18 @@ module CC
     board.not_nil!
   end
 
+  # OPTIMIZE: this should probably not hav to run on every socket message. Hi future Crystal I left you a problem!
+  def self.board_list
+    board_list = {} of String => Hash(String, String | Array(String))
+    boards.map do |board|
+      board_list[board.id] = {"name" => board.name, "flags" => board.flags}
+    end
+    board_list
+  end
+
 
 end
 
 
 # CC.initialize_dummy_boards
+# puts CC.board_list
