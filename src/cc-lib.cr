@@ -4,7 +4,7 @@ require "json"
 
 # TODO: Write documentation for `CC::Library`
 module CC
-  VERSION = "0.2.3"
+  VERSION = "0.2.31"
   @@boards = [] of Board
   @@subscriptions = {} of String => Array(HTTP::WebSocket)
   @@sockets = [] of HTTP::WebSocket
