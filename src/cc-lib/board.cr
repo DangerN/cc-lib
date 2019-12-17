@@ -4,11 +4,21 @@ module CC
   # Represents a single board, represents a collection of similar `Post`s and `Thread`s.
   class Board
     include JSON::Serializable
+    @[JSON::Field(key: "id")]
     property id : String
+
+    @[JSON::Field(key: "name")]
     property name : String
+
+    @[JSON::Field(key: "flags")]
     property flags = [] of String
+
+    @[JSON::Field(key: "thread_limit")]
     property thread_limit : UInt8 = 25
+
     property threads = [] of CC::Thread
+
+    @[JSON::Field(key: "post_count")]
     property post_count : UInt64
 
     def add_thread(thread_options, post_options)
