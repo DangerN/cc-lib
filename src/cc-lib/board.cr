@@ -9,6 +9,7 @@ module CC
     property flags = [] of String
     property thread_limit : UInt8 = 25
     property threads = [] of CC::Thread
+    property post_count : UInt64
 
     def add_thread(thread_options, post_options)
       thread = Thread.new **thread_options

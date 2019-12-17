@@ -23,7 +23,9 @@ module CC
 
   # Takes a JSON object representing a `Board`
   def self.initialize_board_from_json(board)
-    @@boards << Board.from_json(board)
+    new_board = Board.from_json(board)
+    @@boards << new_board
+    new_board
   end
 
   def self.board_by_id(board_id)
@@ -39,8 +41,6 @@ module CC
     end
     board_list
   end
-
-
 end
 
 
